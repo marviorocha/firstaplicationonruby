@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+That first aplication to larning ruby on rails!
 
-Things you may want to cover:
+What's resolved here:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ * Study class Object
+ * Study arays
+ * Study methods
+ * def
+ * loops
+ * rake routes
+ * attr_acessor class application
+ * Controllers View and Model
+ * Dir Methods for Read and Open files
+ 
