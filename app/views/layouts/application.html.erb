@@ -5,11 +5,27 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
-  <body>
-    <%= render "layouts/messagers" %>
-    <%= yield %>
+  <body data-spy="scroll" data-offset="0" data-target="#navigation">
+
+    <%= render "layouts/navigation" %>
+
+
+
+        <%= render "layouts/messagers" %>
+        <%= yield %>
+
+
+    <%= render "layouts/footer" %>
+
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script>
+    $('.carousel').carousel({
+      interval: 3500
+    })
+    </script>
   </body>
 </html>
