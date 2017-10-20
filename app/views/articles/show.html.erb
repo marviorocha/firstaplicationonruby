@@ -1,9 +1,12 @@
-<h1>Show Article</h1>
+<div class="container">
+  <h1>Show Article</h1>
 
-<ul>
-  <li>
-  Title: <%= @article.title %>
-  </li>
-  <li>  Description: <%= @article.description %></li>
-</ul>
-<p><%= link_to "Listing Articles", articles_path(@article) %></p>
+  <ul>
+    <li>
+    Title: <%= @article.title %>
+    </li>
+    <li>  Description: <%= @article.description %></li>
+  </ul>
+  <p><%= link_to "Listing Articles", articles_path(@article) %></p>
+
+</div>
