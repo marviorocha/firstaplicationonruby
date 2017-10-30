@@ -1,0 +1,35 @@
+
+<div class="container bootstrap snippet">
+
+    <div class="col-md-12">
+      <% @article.each do |article| %>
+        <article>
+            <div class="line-item hf-item-odd clearfix">
+                <div class="content-image">
+                <a class="image-link article-link" href="#">
+                  <img class="img-thumbnail"  src="https://placehold.it/140x100/5bc0de">
+                  <span class="overlay article-overlay"></span>
+                </a>
+              </div>
+              <div class="hf-info">
+                <div class="hf-category">
+                  <a href="#" class="text-danger">Category</a>
+                </div>
+                <h2 class="post-title">
+                <a class="article-link" href="#">
+                  <%= article.title %>
+                  <span class="overlay article-overlay"></span>
+                </a>
+                </h2>
+                <div class="summary">
+                 <%= truncate(article.description, length:200) %>
+                 <small>Create by: <%= article.user.email if article.user %></small>
+                </div>
+              </div>
+            </div>
+        </article>
+<% end %>
+<!-- end article file -->
+
+    </div>
+</div>
