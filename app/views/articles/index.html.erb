@@ -6,7 +6,7 @@
   <div class="container">
     <h1>List my Article </h1>
 
-    <div class="row col-md-6 col-md-offset-2 custyle">
+    <div class="row col-md-12   custyle">
     <table class="table table-striped custab">
     <thead>
       <%= link_to "Create new Article", new_article_path, class:"btn btn-primary btn-xs pull-right" %>
@@ -21,9 +21,11 @@
             <tr>
                 <td><%= article.id %></td>
                 <td><%= article.title %></td>
-                <td><%= article.description %></td>
+                <td><%= truncate(article.description, length:100) %></td>
                 <td class="text-center">
                   <%= link_to "View", article_path(article), class:"btn btn-info btn-xs" %></td>
+                  <td class="text-center">
+                    <%= link_to "Edit", edit_article_path(article), class:"btn btn-info btn-xs" %></td>
                 <td class="text-center">
                   <%= link_to "Delete", article_path(article), method: :delete,
                   data:{confirm:"Deseja deletar esse artigo?"}, class:"btn btn-danger btn-xs" %></td>

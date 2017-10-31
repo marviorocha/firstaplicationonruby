@@ -8,5 +8,10 @@ class PagesController < ApplicationController
 
   end
 
+  def blog
+   @article = Article.all
+  
+  end
+
 end
 #end class to Welcome Template

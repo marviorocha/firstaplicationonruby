@@ -1,14 +1,17 @@
-<% if @article.errors.any? %>
+<div class="container">
+  <% if @article.errors.any? %>
 
-   <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
+     <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
 
-   <ul>
-   <% @article.errors.full_messages.each do |message| %>
-     <li><%= message %></li>
-   <% end %>
-   </ul>
+     <ul>
+     <% @article.errors.full_messages.each do |message| %>
+       <li><%= message %></li>
+     <% end %>
+     </ul>
 
-<% end %>
-<h1>New Article</h1>
+  <% end %>
+  <h1>New Article</h1>
 
-<%= render "form"  %>
+  <%= render "form"  %>
+
+</div>
