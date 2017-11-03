@@ -12,4 +12,5 @@ root'pages#home'
 
 get 'blog', to: 'pages#blog'
 get 'about', to: 'pages#about'
+get 'blogs', to: 'pages#blog#show'
 end

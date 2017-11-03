@@ -1,15 +1,16 @@
 class PagesController < ApplicationController
 
   def home
- 
+
   end
 
+ 
   def about
 
   end
 
   def blog
-   @article = Article.all
+    @article = Article.all
 
   end
 
