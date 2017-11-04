@@ -12,6 +12,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'jquery-rails'
 gem 'devise', '~> 4.3'
 gem 'devise-bootstrap-views'
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'

@@ -11,6 +11,7 @@ root'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 get 'blog', to: 'pages#blog'
+get 'blog/view/:id', to: 'pages#view', as: 'view'
 get 'about', to: 'pages#about'
-get 'blogs', to: 'pages#blog#show'
+
 end

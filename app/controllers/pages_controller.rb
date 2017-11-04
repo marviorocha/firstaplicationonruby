@@ -4,14 +4,19 @@ class PagesController < ApplicationController
 
   end
 
- 
+
   def about
 
   end
 
   def blog
-    @article = Article.all
+    @article = Article.paginate(:page => params[:page], :per_page => 3)
 
+
+  end
+
+  def view
+    @article = Article.find(params[:id])
   end
 
 end

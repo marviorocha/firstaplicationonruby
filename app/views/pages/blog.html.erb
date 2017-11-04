@@ -16,19 +16,29 @@
                   <a href="#" class="text-danger">Category</a>
                 </div>
                 <h2 class="post-title">
+
+
                 <a class="article-link" href="#">
-                  <%= article.title %>
+                <%= link_to "#{article.title}", view_path(article) %>
                   <span class="overlay article-overlay"></span>
                 </a>
                 </h2>
                 <div class="summary">
                  <%= truncate(article.description, length:200) %>
+              <p>   <%= link_to "Leia mais", view_path(article), class:"btn-primary btn-default" %></p>
+
+                 </button>
                  <small>Create by: <%= article.user.email if article.user %></small>
                 </div>
               </div>
             </div>
         </article>
+
 <% end %>
+
+<ul class="pagination">
+Páginas: <%= will_paginate @article %>
+</ul>
 <!-- end article file -->
 
     </div>
