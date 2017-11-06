@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 devise_for :users
 #My resources for my application writer on rails
 resources :articles
-
+resources :categories
 
 root'pages#home'
 

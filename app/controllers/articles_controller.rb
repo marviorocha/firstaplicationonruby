@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+
 before_action :authenticate_user!
 before_action :set_article, only: [:edit, :update, :show, :destroy]
 
@@ -37,12 +38,13 @@ end #End Edit
 def update
 
 
-  if @article.update(article_params)
-    flash[:notice] = "Article edited with sucess"
+if @article.update(article_params)
+    flash[:notice] = "Article edited with successfull"
     redirect_to article_path(@article)
-  else
+else
     render "edit"
-  end
+end
+
 end #End update article
 
 def destroy

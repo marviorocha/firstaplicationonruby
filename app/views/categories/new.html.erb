@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>New Categories</h1>
+  <% if @category.errors.any? %>
+<h1><%= pluralize(@category.errors.count, 'error') %> has proibithe error on category</h1>
+  <% @category.errors.full_messages.each do |message| %>
+  <ul>
+    <li><%= message %></li>
+  </ul>
+  <% end %>
+  <% end %>
+  <%= render "form" %>
+</div>
