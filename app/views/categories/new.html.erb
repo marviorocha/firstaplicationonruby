@@ -1,12 +1,21 @@
 <div class="container">
   <h1>New Categories</h1>
+
+
+
   <% if @category.errors.any? %>
-<h1><%= pluralize(@category.errors.count, 'error') %> has proibithe error on category</h1>
-  <% @category.errors.full_messages.each do |message| %>
+
+  <h1><%=  pluralize(@category.errors.count, "error") %> proibhith any error veja abaixo:</h1>
+
+
   <ul>
-    <li><%= message %></li>
+  <%=  @category.errors.full_messages.each do |messager| %>
+
+  <li><%= messager %></li>
+    <% end %>
   </ul>
+
   <% end %>
-  <% end %>
+
   <%= render "form" %>
 </div>
